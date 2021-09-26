@@ -43,7 +43,8 @@ lowerChoice = confirm( "Do you want your password to contain LOWERCASE LETTERS?"
 symbolChoice = confirm("Do you want your password to contain SPECIAL CHARACTERS/SYMBOLS?");
 
   if (numberChoice === false && upperChoice === false && lowerChoice === false && symbolChoice === false) {
-    alert("At least one of the criteria's must be selected. Please start over.")};
+    alert("At least one of the criteria'" +
+        "s must be selected. Please start over.")};
     
   var lengthValue = length * 1;
   console.log(typeof lengthValue);
@@ -51,25 +52,20 @@ symbolChoice = confirm("Do you want your password to contain SPECIAL CHARACTERS/
   var charAvail = [];
   
     if (numberChoice === true) {
-      charAvail.concat(number);
       charAvail =  charAvail.concat(number);
     }
 
     if (upperChoice === true) {
-      charAvail.concat(upper);
-      charAvail =  charAvail.concat(upper);
+      charAvail =  charAvail.concat(charUpper);
     }
 
     if (lowerChoice === true) {
-      charAvail.concat(lower);
-      charAvail =  charAvail.concat(lower);
+      charAvail =  charAvail.concat(charLower);
     }
 
     if(symbolChoice === true) {
-      charAvail.concat(lower);
-      charAvail =  charAvail.concat(symbol);
+      charAvail =  charAvail.concat(sym);
     }
-
 
   var password = [];
   function passChar(lengthValue, charAvail) {
